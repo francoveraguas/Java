@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Franco
  */
-public class Ejercicio5 {
+public class Ejercicio05 {
 
     /**
      * @param args the command line arguments

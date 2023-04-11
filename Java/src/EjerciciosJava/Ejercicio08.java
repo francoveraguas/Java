@@ -7,12 +7,11 @@ package EjerciciosJava;
 
 import java.util.Scanner;
 
-
 /**
  *
  * @author Franco
  */
-public class Ejercicio1 {
+public class Ejercicio08 {
 
     /**
      * @param args the command line arguments
@@ -21,14 +20,14 @@ public class Ejercicio1 {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Ingresa un numero entero: ");
-        int num1 = leer.nextInt();
-        System.out.println("Ingresa otro numero entero: ");
-        int num2 = leer.nextInt();
+        System.out.println("Ingrese nota:");
+        int nota = leer.nextInt();
         
-        int suma = num1 + num2 ;
-        
-        System.out.println("La suma de sus numeros es: " + suma);
+        while(nota < 0 || nota > 10){
+            System.out.println("Ingrese nota: ");
+            nota = leer.nextInt();
+            
+        }
     }
     
 }

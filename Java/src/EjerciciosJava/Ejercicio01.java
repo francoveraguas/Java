@@ -6,14 +6,13 @@
 package EjerciciosJava;
 
 import java.util.Scanner;
-import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
-import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+
 
 /**
  *
  * @author Franco
  */
-public class Ejercicio3 {
+public class Ejercicio01 {
 
     /**
      * @param args the command line arguments
@@ -22,14 +21,14 @@ public class Ejercicio3 {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Escriba una frase para trabajar: ");
-        String frase = leer.next();
+        System.out.println("Ingresa un numero entero: ");
+        int num1 = leer.nextInt();
+        System.out.println("Ingresa otro numero entero: ");
+        int num2 = leer.nextInt();
         
-        String fraseminus = toLowerCase(frase);
-        String frasemayus = toUpperCase(frase);
+        int suma = num1 + num2 ;
         
-        System.out.println("Su frase en minusculas es: " + fraseminus);
-        System.out.println("Su frase en mayusculas es: " + frasemayus);
+        System.out.println("La suma de sus numeros es: " + suma);
     }
     
 }
