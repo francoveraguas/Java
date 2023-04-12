@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EjerciciosJava;
+package EjerciciosPracticosJava;
 
 import java.util.Scanner;
-import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
 import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
 /**
  *
  * @author Franco
  */
-public class Ejercicio03 {
+public class Aprendizaje04 {
 
     /**
      * @param args the command line arguments
@@ -22,14 +21,20 @@ public class Ejercicio03 {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Escriba una frase para trabajar: ");
+        System.out.println("Ingrese frase: ");
         String frase = leer.next();
+        frase = toUpperCase(frase);
         
-        String fraseminus = toLowerCase(frase);
-        String frasemayus = toUpperCase(frase);
+        String comp = "A";
+        String caracter = frase.substring(0,1);
         
-        System.out.println("Su frase en minusculas es: " + fraseminus);
-        System.out.println("Su frase en mayusculas es: " + frasemayus);
+        boolean resultado = comp.equals(caracter);
+        
+        if(resultado == true){
+            System.out.println("Correcto");
+        } else {
+            System.out.println("Incorrecto");
+        }
     }
     
 }

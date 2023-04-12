@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EjerciciosJava;
+package EjerciciosPracticosJava;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Franco
  */
-public class Ejercicio09 {
+public class Aprendizaje05 {
 
     /**
      * @param args the command line arguments
@@ -20,24 +20,18 @@ public class Ejercicio09 {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         
-        int cont = 20;
+        int limite = 100;
         int suma = 0;
-        
         do{
-            System.out.println("Ingrese numero mayor a 0: ");
+            System.out.println("Ingrese un numero: ");
             int num = leer.nextInt();
-            if(num > 0){
-            suma = suma+num;
-            }
-            cont = cont-1;
             
-            if (num == 0){
-                System.out.println("Se capturo el numero 0");
-                break;
-            }
-        } while(cont > 0);
+            suma = suma + num;
+                    
+        } while (suma < limite);
         
-        System.out.println("La suma de los numeros ingresados es: " + suma);
+        System.out.println("Se supero el limite de 100.");
+        System.out.println("La suma de sus numeros es: " + suma);
     }
     
 }

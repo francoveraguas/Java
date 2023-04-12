@@ -3,24 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EjerciciosJava;
+package EjerciciosGuiaTeoricoJava;
+
+import java.util.Scanner;
 
 /**
  *
  * @author Franco
  */
-public class EjercicioDePractica {
+public class Ejercicio04 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String nombre = "Franco Veraguas";
-        int edad = 30;
+        Scanner leer = new Scanner(System.in);
         
-        System.out.println("Su numbre es: " + nombre);
-        System.out.println("Su edad es: " + edad);
+        System.out.println("Ingrese cantidad de grados Centigrados: ");
+        int grados = leer.nextInt();
+        
+        double farenheit = 32 + (9 * grados / 5);
+        
+        System.out.println("El equivalente en Farenheit es: " + farenheit);
     }
     
 }

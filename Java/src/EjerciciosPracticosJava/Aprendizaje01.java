@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EjerciciosJava;
+package EjerciciosPracticosJava;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Franco
  */
-public class Ejercicio08 {
+public class Aprendizaje01 {
 
     /**
      * @param args the command line arguments
@@ -20,13 +20,13 @@ public class Ejercicio08 {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Ingrese nota:");
-        int nota = leer.nextInt();
+        System.out.println("Ingrese numero para determinar si es Par o ImPar");
+        int num = leer.nextInt();
         
-        while(nota < 0 || nota > 10){
-            System.out.println("Ingrese nota: ");
-            nota = leer.nextInt();
-            
+        if(num % 2 == 0){
+            System.out.println("Su numero es Par");
+    } else {
+            System.out.println("Su numero es ImPar");
         }
     }
     

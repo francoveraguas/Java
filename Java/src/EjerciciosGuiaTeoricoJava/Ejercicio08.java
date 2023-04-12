@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EjerciciosJava;
+package EjerciciosGuiaTeoricoJava;
 
 import java.util.Scanner;
 
@@ -11,20 +11,23 @@ import java.util.Scanner;
  *
  * @author Franco
  */
-public class Ejercicio02 {
+public class Ejercicio08 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Ingresa tu nombre: ");
-        String nombre = leer.next();
+        System.out.println("Ingrese nota:");
+        int nota = leer.nextInt();
         
-        System.out.println("Su nombre es " + nombre);
+        while(nota < 0 || nota > 10){
+            System.out.println("Ingrese nota: ");
+            nota = leer.nextInt();
+            
+        }
     }
     
 }

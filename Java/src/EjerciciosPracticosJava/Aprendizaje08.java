@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EjerciciosJava;
+package EjerciciosPracticosJava;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Franco
  */
-public class Ejercicio05 {
+public class Aprendizaje08 {
 
     /**
      * @param args the command line arguments
@@ -20,22 +20,19 @@ public class Ejercicio05 {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Ingrese un numero");
+        System.out.println("De cuantos asteriscos quiere su cuadrado?");
         int num = leer.nextInt();
         
-        int doble = num * 2;
-        int triple = num * 3;
-        double raiz = Math.sqrt(num);
-        
-        System.out.println("Su numero es: " + num);
-        System.out.println("El doble es: " + doble);
-        System.out.println("El triple es: " + triple);
-        System.out.println("La raiz cuadrada es: " + raiz);
-        
-        
-        
-                
-        
+        for(int i = 1; i <= num; i++){
+           for(int j = 1; j <= num; j++){
+               if(i == 1 || i == num || j == 1 || j == num){
+               System.out.print(" * ");
+           } else {
+                   System.out.print("   ");
+                   }
+            }
+           System.out.println("");
+        }
     }
     
 }
