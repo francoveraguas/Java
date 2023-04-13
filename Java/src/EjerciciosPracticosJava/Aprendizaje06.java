@@ -36,6 +36,7 @@ public class Aprendizaje06 {
         int opcion = leer.nextInt();
         String resp = "N";
         do{
+            resp = "N";
         switch(opcion){
             case 1:
                int suma = num1+num2;
@@ -43,15 +44,15 @@ public class Aprendizaje06 {
                 break;
             case 2:
                 int resta = num1-num2;
-                System.out.println("LA SUMA ES: " + resta);
+                System.out.println("LA RESTA ES: " + resta);
                 break;
             case 3:
                 int mult = num1*num2;
-                System.out.println("LA SUMA ES: " + mult);
+                System.out.println("LA MULTIPLICACION ES: " + mult);
                 break;
             case 4:
                 double div = num1/num2;
-                System.out.println("LA SUMA ES: " + div);
+                System.out.println("LA DIVISION ES: " + div);
                 break;
             case 5:
                 System.out.println("SEGURO DESEA SALIR?");
@@ -61,15 +62,22 @@ public class Aprendizaje06 {
                 resp = toUpperCase(resp);
                 if("S".equals(resp)){
                 System.out.println("SALIENDO DEL SISTEMA...");
+                break;
                 } else {
                     System.out.println("INGRESE UNA OPCION: ");
                     opcion = leer.nextInt();
-                break;
+                continue;
                 }
             default:
                 System.out.println("OPCION INCORRECTA. SALIENDO...");
-        }
-        } while(opcion != 5);
+                break;
+            }
+            if(opcion == 1 || opcion == 2 || opcion == 3 || opcion == 4){
+                System.out.println("INGRESE OPCION PARA CONTINUAR");
+                System.out.println("");
+                opcion = leer.nextInt();
+            }
+        } while(opcion < 5 || "N".equals(resp));
     }
     
 }
