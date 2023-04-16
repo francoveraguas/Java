@@ -21,12 +21,25 @@ public class Ejercicio11 {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         String frase;
-        int longitud;
+        
         
         System.out.println("INGRESE FRASE A CODIFICAR: ");
         frase = leer.nextLine();
         
-        longitud = (int) length(frase);
+        String retorno = codificar(frase);
+        
+        System.out.println("SU FRASE ES: ");
+        System.out.println(retorno);
+        
+        System.out.println("");
+    }
+   
+    
+public static String codificar(String frase){
+int longitud;
+String retorno;
+    
+    longitud = (int) length(frase);
         String[] vector = new String [longitud];
         
         for(int i = 0; i <= longitud-1; i++){
@@ -50,13 +63,15 @@ public class Ejercicio11 {
                 vector[i] = "*";    
             }
         }
-        System.out.println("SU FRASE ES: ");
+        retorno = vector[0];
         
         for(int i = 0; i < longitud; i++){
-            System.out.print(vector[i]); 
-            
+            if(i > 0){
+            retorno = retorno + vector[i];
+            }
         }
-        System.out.println("");
-    }
     
+return retorno;
+}
+
 }
